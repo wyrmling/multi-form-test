@@ -1,4 +1,5 @@
-/* 
+/* FIXME: */
+/*
 :root {
   --primary: #1aac83;
   --error: #e7195a;
@@ -162,6 +163,7 @@ Opacity: 1.00;
 position: absolute;
 width: 1140px;
 height: 278px;
+    /* можно сократить */
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border-bottom-right-radius: 8px;
@@ -274,8 +276,10 @@ select {
   border-color: #bdbdbd;
     border-width: 1px;
     border-style: solid;
+    /*два раза*/
     border-radius: 8px;
   background-color: #FFFFFF;
+    /*и тут*/
   border-radius: 10px;
   outline: none;
 }
@@ -562,6 +566,7 @@ position: absolute;
 width: 1140px;
 height: 278px;
 top: 27%;
+    /*можно короче*/
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border-bottom-right-radius: 8px;
@@ -571,6 +576,7 @@ background: #ffffff
 }
 
 .wizzard-step-active-3 {
+    /*TODO*/
   /* width: 55px;
 height: 15px; */
 padding-left: 1%;
@@ -602,6 +608,7 @@ color: #ffffff;
   width: 20%;
   height: 278px;
   top: 27%;
+    /*TODO*/
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 8px;
@@ -657,6 +664,7 @@ color: #ffffff;
   div.error {
     padding: 10px;
     background: #ffefef;
+      /*а где задается переменная?*/
     border: 1px solid var(--error);
     color: var(--error);
     border-radius: 4px;

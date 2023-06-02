@@ -1,3 +1,4 @@
+// форматирование!
 import React, { useState } from 'react';
 
 import { useItemContext } from "../../hooks/useItemContext"
@@ -10,8 +11,11 @@ const ItemEditModal = ({setItemsList, closeEditModal, showEditModal, modalEditId
 
     const { items, dispatch } = useItemContext()
     const { user } = useAuthContext()
+    // не используется
     const [error, setError] = useState(null)
+    // аналогично
     const [emptyFields, setEmptyFields] = useState([])
+    // зачем?
     const _id = modalEditId
 
     const handleSubmit = async (e) => {
@@ -39,11 +43,13 @@ const ItemEditModal = ({setItemsList, closeEditModal, showEditModal, modalEditId
           setError(json.error)
           setEmptyFields(json.emptyFields)
         }
+        // if/else
         if (response.ok) {
           setName('')
           setIsActive('')
           setError(null)
           setEmptyFields([])
+          // убрать
           // dispatch({type: 'DELETE_ITEM', payload: json})
           dispatch({type: 'CREATE_ITEM', payload: json})
           setItemsList([json, ...items])      
@@ -52,6 +58,7 @@ const ItemEditModal = ({setItemsList, closeEditModal, showEditModal, modalEditId
         closeEditModal();
       }
         return (
+            // модальное окно можно было в компонент перенести
             <div className={(showEditModal ? "modal" : 'hidden')}>
                 <div className={(showEditModal ? 'modal-edit-header' : 'hidden')}> 
                     <p className={(showEditModal ? 'wizzard-step-active-3' : 'hidden')}>Edit item</p>
@@ -70,9 +77,12 @@ const ItemEditModal = ({setItemsList, closeEditModal, showEditModal, modalEditId
                             </div>
                             <div className={(showEditModal ? 'group-input-wrapper-2' : 'hidden')}>
                                 <label className={(showEditModal ? 'lbl' : '')}>Select State</label>
+                              {/* FIXME: */}
                                 {/* <input type="text" name="password" placeholder="Enter Password" className="input"/> */}
-                                <select 
-                                // value={modalEditIsActive} 
+                                <select
+                                // FIXME:
+                                // value={modalEditIsActive}
+                                // видимо, опечатка
                                 sname="state" 
                                 onChange={(e) => setIsActive(e.target.value)}
                                 className={(showEditModal ? "input" : 'hidden')}>

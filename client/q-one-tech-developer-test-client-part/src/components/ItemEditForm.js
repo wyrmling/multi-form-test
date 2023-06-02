@@ -1,3 +1,4 @@
+// форматирование!
 import React, { useState }  from 'react';
 import ItemEditModal from './modals/ItemEditModal';
 import ItemDeleteModal from './modals/ItemDeleteModal';
@@ -6,10 +7,12 @@ import { useItemContext } from '../hooks/useItemContext'
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const ItemEditForm = ({
+  // not used
     nextStep, 
     twoStepsBack, 
     openEditModal,
-    closeEditModal, 
+    closeEditModal,
+  // not used
     toggleDeleteModal, 
     showEditModal,
     modalEditId,

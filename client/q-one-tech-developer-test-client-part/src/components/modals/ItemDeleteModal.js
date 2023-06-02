@@ -1,3 +1,5 @@
+// форматирование!
+// неиспользуемые импорты
 import React, { Component, useState } from 'react';
 import { useItemContext } from '../../hooks/useItemContext'
 import { useAuthContext } from '../../hooks/useAuthContext'
@@ -5,6 +7,7 @@ import { useAuthContext } from '../../hooks/useAuthContext'
 const ItemDeleteModal = ({modalDeleteId, closeDeleteModal, showDeleteModal}) => {
     const { dispatch } = useItemContext()
     const { user } = useAuthContext()
+    // а смысл?)
     const _id = modalDeleteId
 
     const handleClick = async () => {
@@ -27,6 +30,7 @@ const ItemDeleteModal = ({modalDeleteId, closeDeleteModal, showDeleteModal}) => 
       }
 
         return (
+          // () не нужны
             <div className={(showDeleteModal ? "modal" : 'hidden')}>
                 
                 <div className={(showDeleteModal ? 'modal-delete-header' : 'hidden')}> 

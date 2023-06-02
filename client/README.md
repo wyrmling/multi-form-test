@@ -1,1 +1,0 @@
-- сделай папку `q-one-tech-developer-test-client-part` вместо папки `client`

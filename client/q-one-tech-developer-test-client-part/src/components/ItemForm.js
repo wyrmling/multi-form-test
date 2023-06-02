@@ -1,3 +1,4 @@
+// форматирование!
 import { useState } from "react"
 import { useItemContext } from "../hooks/useItemContext"
 import { useAuthContext } from '../hooks/useAuthContext'
@@ -8,7 +9,9 @@ const ItemForm = ({nextStep, setLastItemId}) => {
   const username = user.username
   const [name, setName] = useState('')
   const [is_active, setIsActive] = useState(true)
+  // not used
   const [error, setError] = useState(null)
+  // not used
   const [emptyFields, setEmptyFields] = useState([])
 
   const handleSubmit = async (e) => {
@@ -20,6 +23,7 @@ const ItemForm = ({nextStep, setLastItemId}) => {
     }
 
     const item = {name, is_active, username}
+    // TODO
 // console.log(item, 'item')
     const response = await fetch('/api/items', {
       method: 'POST',
@@ -38,6 +42,7 @@ const ItemForm = ({nextStep, setLastItemId}) => {
     }
     if (response.ok) {
       setName('')
+      // там же булин
       setIsActive('')
       setError(null)
       setEmptyFields([])
