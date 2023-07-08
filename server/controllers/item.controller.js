@@ -1,3 +1,4 @@
+// форматирование
 const express = require('express')
 
 const itemServices = require("../services/item.service")
@@ -9,6 +10,7 @@ const getAllItemsCtrl = async (req,res) => {
 
 const getOneItemCtrl = async (req,res) => {
     const { id } = req.params
+    // убрать
     console.log(id)
     const { status, response } = await itemServices.getOneItem(id)
     return res.status(status).json(response)

@@ -1,3 +1,4 @@
+// форматирование!
 import React from 'react';
 import { useLogin } from "../hooks/useLogin"
 import { useAuthContext } from '../hooks/useAuthContext'
@@ -9,6 +10,7 @@ const AuthForm = ({nextStep, setUsername, setPassword, username, password}) => {
     const handleAuthSubmit = async (e) => {
         e.preventDefault()
         await login(username, password)
+        // убрать
         console.log(error, 'error')
         if(user) {
             nextStep();
@@ -16,6 +18,7 @@ const AuthForm = ({nextStep, setUsername, setPassword, username, password}) => {
         
       }
         return (
+            // можно вынести в переиспользуемый компонент
             <div className='main'>
             <div className='wizzard'>
                 <div className='wizzard-step-1'>
@@ -39,7 +42,7 @@ const AuthForm = ({nextStep, setUsername, setPassword, username, password}) => {
                 
                 <div className='auth-container'>
                     
-                    
+                    {/* убрать */}
                         {/* <Formik initialValues={{
                             username: username,
                             password: password
@@ -76,6 +79,7 @@ const AuthForm = ({nextStep, setUsername, setPassword, username, password}) => {
                                     Log In
                                 </button>
                                 </div>
+                  {/* FIXME */}
                             {/* </Form>
                         )}
                         </Formik> */}

@@ -1,3 +1,4 @@
+// форматирование, отступы
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const validator = require('validator')
@@ -23,6 +24,7 @@ userSchema.statics.signup = async function(username, password) {
   if (!username || !password) {
     throw Error('All fields must be filled')
   }
+  // убрать
 //   if (!validator.isStrongPassword(password)) {
 //     throw Error('Password not strong enough')
 //   }

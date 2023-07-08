@@ -6,6 +6,7 @@ import { ItemContextProvider } from './context/ItemContext'
 import { AuthContextProvider } from './context/AuthContext'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// контексты лучше в App задавать
 root.render(
   <React.StrictMode>
     <AuthContextProvider>

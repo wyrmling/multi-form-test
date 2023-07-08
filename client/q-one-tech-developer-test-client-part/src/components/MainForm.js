@@ -1,3 +1,4 @@
+// форматирование!
 import React, { useEffect, useState } from 'react';
 import AuthForm from './AuthForm'
 import ItemForm from './ItemForm'
@@ -15,7 +16,9 @@ const MainForm = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
+  // set state не используется?
   const [itemName, setItemName] = useState('')
+  // set state не используется?
   const [itemState, setItemState] = useState('')
 
   const [lastItemId, setLastItemId] = useState('')
@@ -28,7 +31,8 @@ const MainForm = () => {
 
   const [modalDeleteId, setModalDeleteId] = useState('')
   const [showDeleteModal, setShowDeleteModal] = useState(false)
-  
+
+  // set state не используется?
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
 
@@ -46,6 +50,7 @@ const MainForm = () => {
     }
 
     if (user) {
+      // а смысл так вызывать? перенеси код функции сюда
         fetchItem()
     }
   }, [dispatch, user])
@@ -65,6 +70,7 @@ const MainForm = () => {
     // Handle fields change
     const handleChange = input => e => {
         setInput({ [input]: e.target.value })
+      // TODO
     //   this.setState({ [input]: e.target.value });
     };
 
@@ -88,11 +94,14 @@ const MainForm = () => {
       setShowDeleteModal(!showDeleteModal)
     }
 
+  // TODO
   console.log(step)
+  // TODO
     // render() 
     //   const { step } = this.state;
     //   const { firstName, lastName, email, occupation, city, bio } = this.state;
     //   const values = { firstName, lastName, email, occupation, city, bio };
+  // в целом, оно там дальше не используется
 const values = {username, password, itemName, itemState, inputState}
     switch (step) {
         case 1:
@@ -111,13 +120,14 @@ const values = {username, password, itemName, itemState, inputState}
             {/* <button onClick={nextStep(setStep,1)}></button> */}
           </AuthForm>
         );
-        case 2:
+      case 2:
         return(
             <ItemForm
             nextStep={nextStep}    
             handleChange={handleChange}
             setLastItemId={setLastItemId}
             step={step}
+            // TODO
             // nextStep={nextStep(setStep,1)} 
             />
         )  
@@ -125,11 +135,13 @@ const values = {username, password, itemName, itemState, inputState}
         return(
           <ItemPreviewForm
           nextStep={nextStep}
-          prevStep={prevStep}    
+          prevStep={prevStep}
+          // кроме nextStep и prevStep ты там ничего не используешь, хм
           handleChange={handleChange}
           values={values}
           step={step}
           lastItemId={lastItemId}
+          // TODO
           // nextStep={nextStep(setStep,1)} 
           />
         )
@@ -158,7 +170,8 @@ const values = {username, password, itemName, itemState, inputState}
     }
 
   }
-  
+
+// FIXME
 // const nextStep = (setStep, step) => {
 //     return setStep(step + 1)
 // };
